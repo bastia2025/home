@@ -1,0 +1,1561 @@
+﻿ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENG English Course Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Google Fonts import */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 50;
+            transition: all 0.3s ease;
+            background-color: transparent;
+        }
+        
+        .header-solid {
+            background-color: #000000;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+        
+        .nav-links a, .nav-links button {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .nav-links a:hover, .nav-links button:hover {
+            color: #60a5fa;
+        }
+        
+        .start-learning-btn {
+            background-color: #3b82f6;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .start-learning-btn:hover {
+            background-color: #2563eb;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            color: white;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        
+        .mobile-menu {
+            display: none;
+            background-color: #000000;
+            border-top: 1px solid #374151;
+        }
+        
+        .mobile-menu-item {
+            width: 100%;
+            text-align: left;
+            padding: 12px 15px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .mobile-menu-item:hover {
+            color: #60a5fa;
+            background-color: #111827;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background-color: #000000;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            color: white;
+        }
+        
+        .hero-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: stagger 0.8s ease-out forwards;
+            animation-delay: 0.1s;
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 32px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: stagger 0.8s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-direction: column;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: stagger 0.8s ease-out forwards;
+            animation-delay: 0.3s;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+        
+        .join-now-btn {
+            background-color: #fbbf24;
+            color: #000000;
+            padding: 16px 32px;
+            border-radius: 9999px;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .join-now-btn:hover {
+            background-color: #f59e0b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+        }
+        
+        .view-plans-btn {
+            border: 2px solid white;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 9999px;
+            background: none;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .view-plans-btn:hover {
+            background-color: white;
+            color: #000000;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 24px;
+            animation: bounce 2s infinite;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 16px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: stagger 0.8s ease-out forwards;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 64px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: stagger 0.8s ease-out forwards;
+            animation-delay: 0.1s;
+        }
+        
+        /* About Section */
+        #about {
+            background-color: #f9fafb;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+        
+        .feature-text {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        /* Levels Section */
+        #levels {
+            background-color: white;
+        }
+        
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        @media (max-width: 1024px) {
+            .levels-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .levels-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .level-card {
+            background: linear-gradient(135deg, #eff6ff 0%, #ecfeff 100%);
+            padding: 32px;
+            border-radius: 16px;
+            border: 2px solid #bfdbfe;
+            transition: all 0.3s ease;
+        }
+        
+        .level-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .level-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .level-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+        
+        .level-subtitle {
+            font-size: 18px;
+            font-weight: 500;
+            color: #2563eb;
+            margin-bottom: 24px;
+        }
+        
+        .level-image {
+            width: 100%;
+            height: 192px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        
+        .level-features {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        
+        .level-features li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .level-features i {
+            color: #10b981;
+            margin-right: 8px;
+        }
+        
+        .level-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 9999px;
+            background-color: #3b82f6;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .level-btn:hover {
+            background-color: #2563eb;
+        }
+        
+        /* Courses Section */
+        #courses {
+            background-color: #f9fafb;
+        }
+        
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+        
+        @media (max-width: 1024px) {
+            .courses-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .course-card {
+            background-color: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .course-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .course-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+        
+        .course-text {
+            color: #6b7280;
+        }
+        
+        /* Pricing Section */
+        #pricing {
+            background-color: white;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+        
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .pricing-card {
+            background-color: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #8b5cf6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .pricing-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: #111827;
+        }
+        
+        .pricing-price {
+            margin-bottom: 24px;
+        }
+        
+        .pricing-amount {
+            font-size: 32px;
+            font-weight: bold;
+            color: #111827;
+        }
+        
+        .pricing-period {
+            color: #6b7280;
+            margin-left: 4px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        
+        .pricing-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .pricing-features i {
+            color: #10b981;
+            margin-right: 8px;
+        }
+        
+        .pricing-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 9999px;
+            background-color: #f3f4f6;
+            color: #111827;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .pricing-btn:hover {
+            background-color: #e5e7eb;
+        }
+        
+        /* Testimonials Section */
+        #testimonials {
+            background-color: white;
+        }
+        
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial-card {
+            background-color: #f9fafb;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-size: 18px;
+            margin-bottom: 24px;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 24px;
+        }
+        
+        .author-info h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+        
+        .author-role {
+            color: #3b82f6;
+            margin-bottom: 4px;
+        }
+        
+        .author-country {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 32px;
+            gap: 8px;
+        }
+        
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #e5e7eb;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .testimonial-dot.active {
+            background-color: #3b82f6;
+        }
+        
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 24px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: stagger 0.8s ease-out forwards;
+            animation-delay: 0.1s;
+        }
+        
+        .cta-subtitle {
+            font-size: 18px;
+            color: #bfdbfe;
+            margin-bottom: 32px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: stagger 0.8s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+        
+        .cta-btn {
+            background-color: #fbbf24;
+            color: #1e3a8a;
+            padding: 16px 40px;
+            border-radius: 9999px;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: stagger 0.8s ease-out forwards;
+            animation-delay: 0.3s;
+        }
+        
+        .cta-btn:hover {
+            background-color: #f59e0b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+        }
+        
+        /* Contact Section */
+        #contact {
+            background-color: #f9fafb;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .contact-form h2, .contact-info h3 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 32px;
+            color: #111827;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #374151;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #2563eb;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .contact-icon {
+            font-size: 18px;
+            color: #3b82f6;
+            margin-right: 12px;
+        }
+        
+        .contact-text {
+            color: #4b5563;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            margin-bottom: 32px;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px 0 0 8px;
+            font-size: 16px;
+            border-right: none;
+        }
+        
+        .newsletter-btn {
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .newsletter-btn:hover {
+            background-color: #2563eb;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4b5563;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .social-link:hover {
+            background-color: #3b82f6;
+            color: white;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: white;
+            padding: 48px 20px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px;
+        }
+        
+        @media (max-width: 1024px) {
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        
+        .footer-text {
+            color: #9ca3af;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-contact {
+            list-style: none;
+        }
+        
+        .footer-contact li {
+            color: #9ca3af;
+            margin-bottom: 8px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 32px;
+            margin-top: 32px;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        
+        /* Animations */
+        @keyframes stagger {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .section-subtitle {
+                font-size: 16px;
+            }
+            
+            .cta-title {
+                font-size: 32px;
+            }
+            
+            .cta-subtitle {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .hero-buttons {
+                gap: 12px;
+            }
+            
+            .join-now-btn, .view-plans-btn {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+            
+            section {
+                padding: 60px 20px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .testimonial-text {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">ENG</div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="nav-links">
+                <a href="#home" onclick="smoothScroll('#home')">Home</a>
+                <a href="#about" onclick="smoothScroll('#about')">About</a>
+                <a href="#courses" onclick="smoothScroll('#courses')">Courses</a>
+                <a href="#levels" onclick="smoothScroll('#levels')">Levels</a>
+                <a href="#pricing" onclick="smoothScroll('#pricing')">Pricing</a>
+                <a href="#testimonials" onclick="smoothScroll('#testimonials')">Testimonials</a>
+                <a href="#contact" onclick="smoothScroll('#contact')">Contact</a>
+                <button class="start-learning-btn" onclick="smoothScroll('#pricing')">Start Learning</button>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="mobile-menu-item" onclick="smoothScroll('#home'); toggleMobileMenu();">Home</button>
+            <button class="mobile-menu-item" onclick="smoothScroll('#about'); toggleMobileMenu();">About</button>
+            <button class="mobile-menu-item" onclick="smoothScroll('#courses'); toggleMobileMenu();">Courses</button>
+            <button class="mobile-menu-item" onclick="smoothScroll('#levels'); toggleMobileMenu();">Levels</button>
+            <button class="mobile-menu-item" onclick="smoothScroll('#pricing'); toggleMobileMenu();">Pricing</button>
+            <button class="mobile-menu-item" onclick="smoothScroll('#testimonials'); toggleMobileMenu();">Testimonials</button>
+            <button class="mobile-menu-item" onclick="smoothScroll('#contact'); toggleMobileMenu();">Contact</button>
+            <button class="mobile-menu-item" onclick="smoothScroll('#pricing'); toggleMobileMenu();">Start Learning</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Master English <br />
+                <span style="color: #fbbf24;">with ENG</span>
+            </h1>
+            <p class="hero-subtitle">
+                Learn English at your pace, from beginner to advanced. Join 50,000+ successful learners.
+            </p>
+            <div class="hero-buttons">
+                 <a href="chapter.html" class="join-now-btn">Join Now</a>
+                <button class="view-plans-btn" onclick="smoothScroll('#pricing')">View Plans</button>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About ENG -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About ENG</h2>
+            <p class="section-subtitle">
+                Our mission is to make English learning accessible, effective, and enjoyable for everyone, everywhere.
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3 class="feature-title">Interactive Lessons</h3>
+                    <p class="feature-text">Engaging multimedia content with real-life scenarios and practical exercises.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3 class="feature-title">Certified Tutors</h3>
+                    <p class="feature-text">Learn from experienced, native-speaking instructors with proven teaching methods.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3 class="feature-title">Flexible Learning</h3>
+                    <p class="feature-text">Study at your own pace, anytime, anywhere, with mobile-friendly courses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Levels Overview -->
+    <section id="levels">
+        <div class="container">
+            <h2 class="section-title">Choose Your Level</h2>
+            <p class="section-subtitle">Progress systematically from beginner to advanced proficiency</p>
+            
+            <div class="levels-grid">
+                <!-- Beginner A1 -->
+                <div class="level-card">
+                    <div class="level-icon">🔤</div>
+                    <h3 class="level-title">Beginner A1</h3>
+                    <h4 class="level-subtitle">Foundations of English</h4>
+                    <p class="feature-text">Start from zero. Learn basic vocabulary, essential phrases, and simple grammar for everyday situations.</p>
+                    <img src="https://placehold.co/400x250/3B82F6/FFFFFF?text=Lesson+Expression" alt="Lesson Expression" class="level-image">
+                    <ul class="level-features">
+                        <li><i class="fas fa-check"></i> Basic Vocabulary</li>
+                        <li><i class="fas fa-check"></i> Simple Sentences</li>
+                        <li><i class="fas fa-check"></i> Daily Phrases</li>
+                        <li><i class="fas fa-check"></i> Alphabet & Numbers</li>
+                    </ul>
+                    <button class="level-btn">Start Now</button>
+                </div>
+                
+                <!-- Elementary A2 -->
+                <div class="level-card">
+                    <div class="level-icon">📚</div>
+                    <h3 class="level-title">Elementary A2</h3>
+                    <h4 class="level-subtitle">Building Confidence</h4>
+                    <p class="feature-text">Expand your vocabulary and start forming simple sentences. Practice conversations about daily life.</p>
+                    <img src="https://placehold.co/400x250/8B5CF6/FFFFFF?text=Lesson+Expression" alt="Lesson Expression" class="level-image">
+                    <ul class="level-features">
+                        <li><i class="fas fa-check"></i> Intermediate Vocabulary</li>
+                        <li><i class="fas fa-check"></i> Present Tenses</li>
+                        <li><i class="fas fa-check"></i> Shopping & Dining</li>
+                        <li><i class="fas fa-check"></i> Travel Expressions</li>
+                    </ul>
+                    <button class="level-btn">Start Now</button>
+                </div>
+                
+                <!-- Intermediate B1 -->
+                <div class="level-card">
+                    <div class="level-icon">💬</div>
+                    <h3 class="level-title">Intermediate B1</h3>
+                    <h4 class="level-subtitle">Everyday Communication</h4>
+                    <p class="feature-text">Communicate effectively in common situations. Understand main points in conversations and texts.</p>
+                    <img src="https://placehold.co/400x250/EC4899/FFFFFF?text=Lesson+Expression" alt="Lesson Expression" class="level-image">
+                    <ul class="level-features">
+                        <li><i class="fas fa-check"></i> Advanced Grammar</li>
+                        <li><i class="fas fa-check"></i> Past & Future Tenses</li>
+                        <li><i class="fas fa-check"></i> Workplace English</li>
+                        <li><i class="fas fa-check"></i> Email Writing</li>
+                    </ul>
+                    <button class="level-btn">Start Now</button>
+                </div>
+                
+                <!-- Upper Intermediate B2 -->
+                <div class="level-card">
+                    <div class="level-icon">🎯</div>
+                    <h3 class="level-title">Upper Intermediate B2</h3>
+                    <h4 class="level-subtitle">Fluent Expression</h4>
+                    <p class="feature-text">Express ideas clearly and understand complex texts. Participate in discussions on familiar topics.</p>
+                    <img src="https://placehold.co/400x250/F59E0B/FFFFFF?text=Lesson+Expression" alt="Lesson Expression" class="level-image">
+                    <ul class="level-features">
+                        <li><i class="fas fa-check"></i> Business English</li>
+                        <li><i class="fas fa-check"></i> Presentations</li>
+                        <li><i class="fas fa-check"></i> Debates</li>
+                        <li><i class="fas fa-check"></i> Academic Writing</li>
+                    </ul>
+                    <button class="level-btn">Start Now</button>
+                </div>
+                
+                <!-- Advanced C2 -->
+                <div class="level-card">
+                    <div class="level-icon">🏆</div>
+                    <h3 class="level-title">Advanced C2</h3>
+                    <h4 class="level-subtitle">Mastery & Nuance</h4>
+                    <p class="feature-text">Achieve near-native proficiency. Understand subtle meanings and express yourself with precision.</p>
+                    <img src="https://placehold.co/400x250/EF4444/FFFFFF?text=Lesson+Expression" alt="Lesson Expression" class="level-image">
+                    <ul class="level-features">
+                        <li><i class="fas fa-check"></i> IELTS/TOEFL Prep</li>
+                        <li><i class="fas fa-check"></i> Literature Analysis</li>
+                        <li><i class="fas fa-check"></i> Professional Communication</li>
+                        <li><i class="fas fa-check"></i> Idioms & Slang</li>
+                    </ul>
+                    <button class="level-btn">Start Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Features -->
+    <section id="courses">
+        <div class="container">
+            <h2 class="section-title">What You'll Learn</h2>
+            <p class="section-subtitle">Comprehensive courses designed for real-world English proficiency</p>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <img src="https://placehold.co/300x200/10B981/FFFFFF?text=Video+Lessons" alt="Video Lessons" class="course-image">
+                    <h3 class="course-title">Interactive Video Lessons</h3>
+                    <p class="course-text">Engaging video content with native speakers and real-life scenarios</p>
+                </div>
+                
+                <div class="course-card">
+                    <img src="https://placehold.co/300x200/8B5CF6/FFFFFF?text=Speaking+Practice" alt="Speaking Practice" class="course-image">
+                    <h3 class="course-title">Speaking Practice</h3>
+                    <p class="course-text">AI-powered speech recognition to improve your pronunciation</p>
+                </div>
+                
+                <div class="course-card">
+                    <img src="https://placehold.co/300x200/0EA5E9/FFFFFF?text=Grammar+Exercises" alt="Grammar Exercises" class="course-image">
+                    <h3 class="course-title">Grammar Exercises</h3>
+                    <p class="course-text">Comprehensive exercises with instant feedback and explanations</p>
+                </div>
+                
+                <div class="course-card">
+                    <img src="https://placehold.co/300x200/F59E0B/FFFFFF?text=Vocabulary+Builder" alt="Vocabulary Builder" class="course-image">
+                    <h3 class="course-title">Vocabulary Builder</h3>
+                    <p class="course-text">Smart flashcards and spaced repetition system for effective learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title">Choose Your Plan</h2>
+            <p class="section-subtitle">Flexible subscription options to fit your learning goals</p>
+            
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Basic</h3>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">$19</span>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Access to A1-A2 levels</li>
+                        <li><i class="fas fa-check"></i> 500+ video lessons</li>
+                        <li><i class="fas fa-check"></i> Daily practice exercises</li>
+                        <li><i class="fas fa-check"></i> Progress tracking</li>
+                        <li><i class="fas fa-check"></i> Community forum</li>
+                    </ul>
+                    
+                    <button class="pricing-btn">Choose Plan</button>
+                </div>
+                
+                <!-- Premium Plan -->
+                <div class="pricing-card">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3 class="pricing-title">Premium</h3>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">$39</span>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> All levels (A1-C2)</li>
+                        <li><i class="fas fa-check"></i> 1500+ video lessons</li>
+                        <li><i class="fas fa-check"></i> Daily practice exercises</li>
+                        <li><i class="fas fa-check"></i> Progress tracking</li>
+                        <li><i class="fas fa-check"></i> Weekly live sessions</li>
+                        <li><i class="fas fa-check"></i> Personalized feedback</li>
+                        <li><i class="fas fa-check"></i> Certificate of completion</li>
+                    </ul>
+                    
+                    <button class="pricing-btn">Choose Plan</button>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <h3 class="pricing-title">Enterprise</h3>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">$99</span>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> All premium features</li>
+                        <li><i class="fas fa-check"></i> 1-on-1 tutoring (4 sessions/week)</li>
+                        <li><i class="fas fa-check"></i> Custom learning path</li>
+                        <li><i class="fas fa-check"></i> Business English focus</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Team management tools</li>
+                        <li><i class="fas fa-check"></i> Analytics dashboard</li>
+                    </ul>
+                    
+                    <button class="pricing-btn">Choose Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Student Success Stories</h2>
+            <p class="section-subtitle">Hear from learners who transformed their English skills with ENG</p>
+            
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "ENG completely transformed my English skills. I went from struggling with basic conversations to confidently presenting in meetings. The structured levels made all the difference!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=Ahmed+M" alt="Ahmed Mohamed" class="author-image">
+                        <div class="author-info">
+                            <h4>Ahmed Mohamed</h4>
+                            <p class="author-role">Software Engineer</p>
+                            <p class="author-country">Egypt</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="display: none;">
+                    <p class="testimonial-text">
+                        "The personalized learning path kept me motivated. I could see my progress week by week, and the certified tutors were incredibly supportive throughout my journey."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/80x80/8B5CF6/FFFFFF?text=Sara+K" alt="Sara Khalid" class="author-image">
+                        <div class="author-info">
+                            <h4>Sara Khalid</h4>
+                            <p class="author-role">University Student</p>
+                            <p class="author-country">Saudi Arabia</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" style="display: none;">
+                    <p class="testimonial-text">
+                        "As a busy professional, ENG's flexible learning system fit perfectly with my schedule. I improved my business English significantly in just 3 months."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://placehold.co/80x80/EC4899/FFFFFF?text=Karim+T" alt="Karim Tamer" class="author-image">
+                        <div class="author-info">
+                            <h4>Karim Tamer</h4>
+                            <p class="author-role">Business Manager</p>
+                            <p class="author-country">UAE</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial Controls -->
+                <div class="testimonial-dots">
+                    <div class="testimonial-dot active" onclick="changeTestimonial(0)"></div>
+                    <div class="testimonial-dot" onclick="changeTestimonial(1)"></div>
+                    <div class="testimonial-dot" onclick="changeTestimonial(2)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Banner -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Transform Your English?</h2>
+            <p class="cta-subtitle">
+                Join thousands of successful learners who have achieved their language goals with ENG.
+            </p>
+            <button class="cta-btn" onclick="smoothScroll('#pricing')">Get Started Now</button>
+        </div>
+    </section>
+
+    <!-- Contact & Newsletter -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div>
+                    <h2>Contact Us</h2>
+                    <form>
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-input" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea rows="5" class="form-input" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info & Newsletter -->
+                <div>
+                    <h3>Contact Information</h3>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <span class="contact-text">eng2025newpiconic@gmail.com</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <span class="contact-text">01060542834</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <span class="contact-text">Egypt, Dakahlia, Mansoura</span>
+                    </div>
+
+                    <h3>Stay Updated</h3>
+                    <p class="contact-text">Subscribe to our newsletter for tips, updates, and special offers.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="newsletter-input">
+                        <button class="newsletter-btn">Subscribe</button>
+                    </div>
+
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3 class="footer-logo">ENG</h3>
+                <p class="footer-text">Master English with our comprehensive learning platform.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home" onclick="smoothScroll('#home')">Home</a></li>
+                    <li><a href="#about" onclick="smoothScroll('#about')">About</a></li>
+                    <li><a href="#courses" onclick="smoothScroll('#courses')">Courses</a></li>
+                    <li><a href="#levels" onclick="smoothScroll('#levels')">Levels</a></li>
+                    <li><a href="#pricing" onclick="smoothScroll('#pricing')">Pricing</a></li>
+                    <li><a href="#testimonials" onclick="smoothScroll('#testimonials')">Testimonials</a></li>
+                    <li><a href="#contact" onclick="smoothScroll('#contact')">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="footer-title">Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="footer-title">Contact</h3>
+                <ul class="footer-contact">
+                    <li>eng2025newpiconic@gmail.com</li>
+                    <li>01060542834</li>
+                    <li>Egypt, Dakahlia, Mansoura</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 ENG English Course Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+        // Smooth scroll to section
+        function smoothScroll(target) {
+            const element = document.querySelector(target);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            if (window.innerWidth < 768) {
+                document.getElementById('mobileMenu').style.display = 'none';
+            }
+        }
+
+        // Navigation shadow on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-solid');
+            } else {
+                header.classList.remove('header-solid');
+            }
+        });
+
+        // Testimonial slider
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        
+        function changeTestimonial(index) {
+            // Hide all testimonials
+            testimonials.forEach(testimonial => {
+                testimonial.style.display = 'none';
+            });
+            
+            // Show selected testimonial
+            testimonials[index].style.display = 'block';
+            
+            // Update active dot
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+            
+            currentTestimonial = index;
+        }
+        
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            changeTestimonial(currentTestimonial);
+        }, 5000);
+
+        // Add subtle animations when elements come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements with animation class
+        const animateElements = document.querySelectorAll('.section-title, .section-subtitle, .feature-card, .level-card, .course-card, .pricing-card');
+        animateElements.forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+```
