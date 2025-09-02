@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="ENG Privacy Policy - Learn how we collect, use, and protect your personal information on our English learning platform."/>
+  <title>Privacy Policy - ENG English Learning Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Serif+Arabic:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --light-bg: #f9f9f9;
+      --text-dark: #2c3e50;
+      --text-light: #7f8c8d;
+      --border-color: #ecf0f1;
+      --accent-hover: #2980b9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Serif', serif;
+      line-height: 1.8;
+      color: var(--text-dark);
+      background-color: var(--light-bg);
+      min-height: 100vh;
+      direction: ltr;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .logo span {
+      color: var(--secondary-color);
+    }
+
+    .language-toggle {
+      display: flex;
+      gap: 10px;
+    }
+
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--secondary-color);
+      color: var(--secondary-color);
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .lang-btn:hover, .lang-btn.active {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+
+    .last-updated {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    h1, h2, h3 {
+      margin: 30px 0 15px 0;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 8px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 25px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
+    ul {
+      margin: 16px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .contact-info {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 30px 0;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .email-link {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .email-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 30px 0;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--text-dark);
+      margin-right: 15px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+
+    .address {
+      font-style: italic;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .language-toggle {
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .lang-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+      }
+
+      .last-updated {
+        font-size: 13px;
+      }
+    }
+
+    /* Arabic Language Styles */
+    [lang="ar"] {
+      font-family: 'Noto Serif Arabic', serif;
+      text-align: right;
+    }
+
+    [lang="ar"] .logo {
+      text-align: right;
+    }
+
+    [lang="ar"] .language-toggle {
+      direction: rtl;
+    }
+
+    [lang="ar"] .footer-content {
+      text-align: right;
+    }
+
+    [lang="ar"] .footer-links a {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+
+    /* Accessibility Enhancements */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: var(--primary-color);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 1000;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 6px;
+    }
+
+    /* Focus indicators for keyboard navigation */
+    button:focus, a:focus {
+      outline: 3px solid var(--secondary-color);
+      outline-offset: 2px;
+    }
+
+    /* Ensure sufficient color contrast */
+    .high-contrast {
+      color: var(--primary-color);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="container">
+    <header role="banner">
+      <div class="logo">ENG<span>.edu</span></div>
+      <div class="language-toggle">
+        <button id="en-btn" class="lang-btn active" onclick="switchLanguage('en')" aria-pressed="true">English</button>
+        <button id="ar-btn" class="lang-btn" onclick="switchLanguage('ar')" aria-pressed="false">العربية</button>
+      </div>
+    </header>
+
+    <div id="main-content" tabindex="-1">
+      <p class="last-updated">Last Updated: September 2, 2025</p>
+      
+      <h1>Privacy Policy</h1>
+      
+      <section>
+        <h2>Introduction</h2>
+        <p>At ENG, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy is designed to provide you with a transparent understanding of how we collect, store, use, transfer, and protect your data when you use our platform for English language courses. By accessing or using our services, you agree to the practices described in this policy.</p>
+        
+        <p>We understand the importance of data privacy and have implemented robust measures to comply with applicable data protection regulations, including GDPR and CCPA. This policy applies to all users of the ENG platform, whether you're a student, instructor, or visitor.</p>
+      </section>
+
+      <section>
+        <h2>Information We Collect</h2>
+        <p>We collect various types of information to provide and improve our services:</p>
+        
+        <h3>Personal Identification Information</h3>
+        <ul>
+          <li>When you register an account, we collect your name, email address, and password</li>
+          <li>Profile information such as your learning goals, proficiency level, and preferred learning style</li>
+          <li>Payment information when you purchase courses (processed securely through our payment partners)</li>
+        </ul>
+        
+        <h3>Usage Data</h3>
+        <ul>
+          <li>Information about your interactions with our platform, including courses accessed, time spent learning, and progress</li>
+          <li>Device information such as IP address, browser type, operating system, and device identifiers</li>
+          <li>Log data including access times, pages viewed, and referring websites</li>
+        </ul>
+        
+        <h3>Automatically Collected Information</h3>
+        <p>We use cookies and similar technologies to enhance your experience, analyze platform usage, and personalize content. You can manage your cookie preferences through your browser settings.</p>
+      </section>
+
+      <section>
+        <h2>How We Use Your Information</h2>
+        <p>We use the collected information for the following purposes:</p>
+        <ul>
+          <li>To provide, maintain, and improve our English language learning services</li>
+          <li>To personalize your learning experience based on your preferences and progress</li>
+          <li>To communicate with you about your account, updates, and customer support</li>
+          <li>To process transactions and send you related information</li>
+          <li>To monitor and analyze usage patterns to improve our platform</li>
+          <li>To detect, prevent, and address technical issues, fraud, or security risks</li>
+          <li>To comply with legal obligations and enforce our Terms of Use</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>How We Share Your Information</h2>
+        <p>We do not sell your personal information. We may share your data in the following circumstances:</p>
+        
+        <h3>Service Providers</h3>
+        <p>We work with trusted third-party service providers who assist us in operating our platform, conducting our business, or servicing you. These providers have access to your personal information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+        
+        <h3>Legal Requirements</h3>
+        <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., a court or government agency).</p>
+        
+        <h3>Business Transfers</h3>
+        <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction, subject to appropriate confidentiality protections.</p>
+        
+        <h3>With Your Consent</h3>
+        <p>We may share your information for other purposes when we have your explicit consent.</p>
+      </section>
+
+      <section>
+        <h2>Data Security</h2>
+        <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These include:</p>
+        <ul>
+          <li>Encryption of data in transit using TLS/SSL protocols</li>
+          <li>Secure storage of personal information with access controls</li>
+          <li>Regular security assessments and vulnerability testing</li>
+          <li>Employee training on data protection practices</li>
+        </ul>
+        <p>While we strive to protect your personal information, no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
+      </section>
+
+      <section>
+        <h2>Your Rights and Choices</h2>
+        <p>Depending on your location, you may have certain rights regarding your personal information:</p>
+        <ul>
+          <li><strong>Access:</strong> You can request access to the personal information we hold about you</li>
+          <li><strong>Correction:</strong> You can update or correct inaccurate information in your account settings</li>
+          <li><strong>Deletion:</strong> You can request deletion of your personal data, subject to certain legal exceptions</li>
+          <li><strong>Portability:</strong> You can request a copy of your data in a structured, machine-readable format</li>
+          <li><strong>Objection:</strong> You can object to certain processing activities, including direct marketing</li>
+          <li><strong>Withdrawal of Consent:</strong> Where processing is based on consent, you can withdraw it at any time</li>
+        </ul>
+        <p>To exercise these rights, please contact us using the information provided below.</p>
+      </section>
+
+      <section>
+        <h2>Children's Privacy</h2>
+        <p>Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13 without parental consent, we will take steps to remove such information from our servers.</p>
+        
+        <p>For users between 13 and 18 years old, we recommend discussing your use of our platform with your parent or guardian. Parents can contact us to request deletion of their child's information.</p>
+      </section>
+
+      <section>
+        <h2>Third-Party Links and Services</h2>
+        <p>Our platform may contain links to third-party websites or services that are not operated by us. We are not responsible for the privacy practices of these third parties. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+        
+        <p>When you make purchases through our platform, payment processing is handled by reputable third-party payment processors. These processors have their own privacy policies, which we recommend you review:</p>
+        <ul>
+          <li>Stripe Privacy Policy</li>
+          <li>PayPal Privacy Policy</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Data Retention</h2>
+        <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. When determining retention periods, we consider:</p>
+        <ul>
+          <li>The amount, nature, and sensitivity of the personal information</li>
+          <li>The potential risk of harm from unauthorized use or disclosure</li>
+          <li>The purposes for which we process your information and whether we can achieve those purposes through other means</li>
+          <li>Applicable legal requirements</li>
+        </ul>
+        <p>When your information is no longer needed, we securely delete or anonymize it.</p>
+      </section>
+
+      <section>
+        <h2>International Data Transfers</h2>
+        <p>Your information may be transferred to and maintained on computers located outside your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those in your jurisdiction.</p>
+        
+        <p>If you are located outside the United States and choose to provide information to us, please note that we transfer the data, including your personal information, to the United States and process it there.</p>
+        
+        <p>Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.</p>
+      </section>
+
+      <section>
+        <h2>Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this page.</p>
+        
+        <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+      </section>
+
+      <div class="contact-info" role="contentinfo">
+        <h2>Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <p>Email: <a href="mailto:support@engplatform.com" class="email-link">support@engplatform.com</a></p>
+        <p>Address: Egypt, Dakahliya, Mansoura</p>
+      </div>
+    </div>
+
+    <footer role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#" aria-label="Terms of Use">Terms of Use</a>
+          <a href="#" aria-label="Cookie Policy">Cookie Policy</a>
+          <a href="#" aria-label="Accessibility Statement">Accessibility</a>
+        </div>
+        <div class="address">
+          &copy; 2025 ENG English Learning Platform. All rights reserved.<br>
+          Egypt, Dakahliya, Mansoura
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Language switching functionality
+    function switchLanguage(lang) {
+      const html = document.documentElement;
+      const enBtn = document.getElementById('en-btn');
+      const arBtn = document.getElementById('ar-btn');
+      
+      if (lang === 'ar') {
+        html.setAttribute('lang', 'ar');
+        html.setAttribute('dir', 'rtl');
+        enBtn.classList.remove('active');
+        enBtn.setAttribute('aria-pressed', 'false');
+        arBtn.classList.add('active');
+        arBtn.setAttribute('aria-pressed', 'true');
+        
+        // Update content for Arabic (simplified - in real implementation, this would be full translation)
+        document.querySelector('h1').textContent = 'سياسة الخصوصية';
+        document.querySelector('.last-updated').textContent = 'آخر تحديث: 2 سبتمبر 2025';
+        document.querySelectorAll('h2')[0].textContent = 'مقدمة';
+        document.querySelectorAll('h2')[1].textContent = 'المعلومات التي نجمعها';
+        document.querySelectorAll('h2')[2].textContent = 'كيف نستخدم معلوماتك';
+        document.querySelectorAll('h2')[3].textContent = 'كيف نشارك معلوماتك';
+        document.querySelectorAll('h2')[4].textContent = 'أمن البيانات';
+        document.querySelectorAll('h2')[5].textContent = 'حقوقك واختياراتك';
+        document.querySelectorAll('h2')[6].textContent = 'خصوصية الأطفال';
+        document.querySelectorAll('h2')[7].textContent = 'روابط وخدمات الطرف الثالث';
+        document.querySelectorAll('h2')[8].textContent = 'احتفاظ البيانات';
+        document.querySelectorAll('h2')[9].textContent = 'نقل البيانات الدولية';
+        document.querySelectorAll('h2')[10].textContent = 'تغييرات في سياسة الخصوصية هذه';
+        document.querySelector('.contact-info h2').textContent = 'اتصل بنا';
+      } else {
+        html.setAttribute('lang', 'en');
+        html.setAttribute('dir', 'ltr');
+        arBtn.classList.remove('active');
+        arBtn.setAttribute('aria-pressed', 'false');
+        enBtn.classList.add('active');
+        enBtn.setAttribute('aria-pressed', 'true');
+        
+        // Reset to English
+        document.querySelector('h1').textContent = 'Privacy Policy';
+        document.querySelector('.last-updated').textContent = 'Last Updated: September 2, 2025';
+        document.querySelectorAll('h2')[0].textContent = 'Introduction';
+        document.querySelectorAll('h2')[1].textContent = 'Information We Collect';
+        document.querySelectorAll('h2')[2].textContent = 'How We Use Your Information';
+        document.querySelectorAll('h2')[3].textContent = 'How We Share Your Information';
+        document.querySelectorAll('h2')[4].textContent = 'Data Security';
+        document.querySelectorAll('h2')[5].textContent = 'Your Rights and Choices';
+        document.querySelectorAll('h2')[6].textContent = 'Children\'s Privacy';
+        document.querySelectorAll('h2')[7].textContent = 'Third-Party Links and Services';
+        document.querySelectorAll('h2')[8].textContent = 'Data Retention';
+        document.querySelectorAll('h2')[9].textContent = 'International Data Transfers';
+        document.querySelectorAll('h2')[10].textContent = 'Changes to This Privacy Policy';
+        document.querySelector('.contact-info h2').textContent = 'Contact Us';
+      }
+    }
+
+    // Accessibility: Focus management
+    document.addEventListener('DOMContentLoaded', function() {
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      
+      // Add keyboard navigation support
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+          document.body.classList.add('keyboard-user');
+        }
+      });
+    });
+
+    // Performance: Ensure page loads within 2 seconds
+    // All styles are inlined and fonts are loaded efficiently
+    // No heavy images or external scripts that would delay loading
+  </script>
+</body>
+</html>

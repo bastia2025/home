@@ -1,0 +1,518 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Cookie Policy for ENG English Learning Platform - Learn how we use cookies and tracking technologies to enhance your experience."/>
+  <title>Cookie Policy - ENG English Learning Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Serif+Arabic:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --light-bg: #f9f9f9;
+      --text-dark: #2c3e50;
+      --text-light: #7f8c8d;
+      --border-color: #ecf0f1;
+      --accent-hover: #2980b9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Serif', serif;
+      line-height: 1.8;
+      color: var(--text-dark);
+      background-color: var(--light-bg);
+      min-height: 100vh;
+      direction: ltr;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .logo span {
+      color: var(--secondary-color);
+    }
+
+    .language-toggle {
+      display: flex;
+      gap: 10px;
+    }
+
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--secondary-color);
+      color: var(--secondary-color);
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .lang-btn:hover, .lang-btn.active {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+
+    .last-updated {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    h1, h2, h3 {
+      margin: 30px 0 15px 0;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 8px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 25px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
+    ul {
+      margin: 16px 0;
+      padding-left: 20px;
+    }
+
+    ol {
+      margin: 16px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .cookie-type {
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      margin: 15px 0;
+      border-left: 4px solid var(--secondary-color);
+    }
+
+    .cookie-type h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+
+    .contact-info {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 30px 0;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .email-link {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .email-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 30px 0;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--text-dark);
+      margin-right: 15px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+
+    .address {
+      font-style: italic;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .language-toggle {
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .lang-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+      }
+
+      .last-updated {
+        font-size: 13px;
+      }
+    }
+
+    /* Arabic Language Styles */
+    [lang="ar"] {
+      font-family: 'Noto Serif Arabic', serif;
+      text-align: right;
+    }
+
+    [lang="ar"] .logo {
+      text-align: right;
+    }
+
+    [lang="ar"] .language-toggle {
+      direction: rtl;
+    }
+
+    [lang="ar"] .footer-content {
+      text-align: right;
+    }
+
+    [lang="ar"] .footer-links a {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+
+    /* Accessibility Enhancements */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: var(--primary-color);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 1000;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 6px;
+    }
+
+    /* Focus indicators for keyboard navigation */
+    button:focus, a:focus {
+      outline: 3px solid var(--secondary-color);
+      outline-offset: 2px;
+    }
+
+    /* Ensure sufficient color contrast */
+    .high-contrast {
+      color: var(--primary-color);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="container">
+    <header role="banner">
+      <div class="logo">ENG<span>.edu</span></div>
+      <div class="language-toggle">
+        <button id="en-btn" class="lang-btn active" onclick="switchLanguage('en')" aria-pressed="true">English</button>
+        <button id="ar-btn" class="lang-btn" onclick="switchLanguage('ar')" aria-pressed="false">العربية</button>
+      </div>
+    </header>
+
+    <div id="main-content" tabindex="-1">
+      <p class="last-updated">Last Updated: September 2, 2025</p>
+      
+      <h1>Cookie Policy</h1>
+      
+      <section>
+        <p>ENG ("we," "us," or "our") operates a platform offering English language courses (the "Platform"). This Cookie Policy explains how we use cookies and similar tracking technologies when you visit our website, mobile applications, or related services. By using the Platform, you consent to the use of cookies as described in this policy. For information on how we handle your personal data, please see our <a href="/privacy-policy" class="email-link">Privacy Policy</a>.</p>
+      </section>
+
+      <section>
+        <h2>1. What Are Cookies?</h2>
+        <p>Cookies are small text files placed on your device (computer, tablet, or mobile) when you visit a website or use an online service. They help websites recognize your device, store preferences, and enhance your user experience. We also use similar technologies, such as web beacons, pixels, and local storage, which serve comparable purposes.</p>
+      </section>
+
+      <section>
+        <h2>2. Types of Cookies We Use</h2>
+        <p>We use the following types of cookies on the Platform:</p>
+
+        <div class="cookie-type">
+          <h3>a. Essential Cookies</h3>
+          <ul>
+            <li><strong>Purpose:</strong> These cookies are necessary for the Platform to function properly, enabling core features like navigation, account access, and course enrollment.</li>
+            <li><strong>Examples:</strong> Authentication cookies, session cookies.</li>
+            <li><strong>Retention:</strong> Typically deleted when you close your browser (session cookies) or after a short period.</li>
+          </ul>
+        </div>
+
+        <div class="cookie-type">
+          <h3>b. Functional Cookies</h3>
+          <ul>
+            <li><strong>Purpose:</strong> These cookies enhance your experience by remembering your preferences, such as language settings or course progress.</li>
+            <li><strong>Examples:</strong> Cookies that save your language choice (e.g., English or Arabic) or track your course completion status.</li>
+            <li><strong>Retention:</strong> May persist for weeks or months, depending on the feature.</li>
+          </ul>
+        </div>
+
+        <div class="cookie-type">
+          <h3>c. Analytics Cookies</h3>
+          <ul>
+            <li><strong>Purpose:</strong> These cookies help us understand how users interact with the Platform, such as which pages are visited or how long users spend on courses, so we can improve our services.</li>
+            <li><strong>Examples:</strong> Cookies used by tools like Google Analytics to track page views and user behavior.</li>
+            <li><strong>Retention:</strong> Varies (e.g., up to 2 years for Google Analytics).</li>
+          </ul>
+        </div>
+
+        <div class="cookie-type">
+          <h3>d. Marketing Cookies</h3>
+          <ul>
+            <li><strong>Purpose:</strong> These cookies enable personalized advertisements or promotional content, such as course recommendations, based on your interests and browsing behavior.</li>
+            <li><strong>Examples:</strong> Cookies set by third-party advertising networks to display relevant ads.</li>
+            <li><strong>Retention:</strong> Varies depending on the third-party provider.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>3. How We Use Cookies</h2>
+        <p>We use cookies to:</p>
+        <ul>
+          <li>Ensure the Platform operates smoothly and securely (e.g., user authentication, secure payments).</li>
+          <li>Personalize your experience, such as remembering your language preference or course progress.</li>
+          <li>Analyze usage patterns to improve Platform functionality and content.</li>
+          <li>Deliver relevant promotions or advertisements, including through third-party partners.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Third-Party Cookies</h2>
+        <p>Some cookies are set by third-party services we use, such as:</p>
+        <ul>
+          <li><strong>Payment Processors:</strong> To facilitate secure transactions.</li>
+          <li><strong>Analytics Providers:</strong> To collect usage data (e.g., Google Analytics).</li>
+          <li><strong>Advertising Partners:</strong> To display personalized ads on or off the Platform. These third parties may place cookies on your device and collect data subject to their own privacy policies. We encourage you to review their policies for details.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. Managing Cookies</h2>
+        <p>You can control how cookies are used:</p>
+        <ul>
+          <li><strong>Browser Settings:</strong> Most browsers allow you to block or delete cookies. Visit your browser’s help section for instructions. Note that disabling essential cookies may affect Platform functionality.</li>
+          <li><strong>Cookie Consent Tool:</strong> On your first visit, you may see a cookie consent banner allowing you to accept or customize your cookie preferences (except for essential cookies, which cannot be disabled).</li>
+          <li><strong>Opting Out of Ads:</strong> For marketing cookies, you can opt out via third-party tools like the Network Advertising Initiative (<a href="http://optout.networkadvertising.org" class="email-link" target="_blank">http://optout.networkadvertising.org</a>) or Your Online Choices (<a href="http://www.youronlinechoices.com" class="email-link" target="_blank">http://www.youronlinechoices.com</a>).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Do Not Track Signals</h2>
+        <p>Some browsers offer a "Do Not Track" (DNT) feature. As there is no universal standard for DNT, our Platform does not currently respond to DNT signals. However, you can manage cookies through your browser settings or our cookie consent tool.</p>
+      </section>
+
+      <section>
+        <h2>7. Data Protection and Cookies</h2>
+        <p>Cookies that collect personal information are subject to our Privacy Policy. We use industry-standard security measures to protect cookie data, but no online transmission is 100% secure.</p>
+      </section>
+
+      <section>
+        <h2>8. Updates to This Cookie Policy</h2>
+        <p>We may update this Cookie Policy periodically to reflect changes in our practices or legal requirements. Significant changes will be communicated by posting the updated policy on the Platform or via email.</p>
+      </section>
+
+      <div class="contact-info" role="contentinfo">
+        <h2>9. Contact Us</h2>
+        <p>If you have questions or concerns about this Cookie Policy, please contact us:</p>
+        <p>ENG Support Team</p>
+        <p>Email: <a href="mailto:support@engplatform2025n@gmail.com" class="email-link">support@engplatform2025n@gmail.com</a></p>
+        <p>Address: Egypt, Dakahliya, Mansoura</p>
+      </div>
+    </div>
+
+    <footer role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+          <a href="/terms-conditions" aria-label="Terms and Conditions">Terms and Conditions</a>
+          <a href="#" aria-label="Accessibility Statement">Accessibility</a>
+        </div>
+        <div class="address">
+          &copy; 2025 ENG English Learning Platform. All rights reserved.<br>
+          Egypt, Dakahliya, Mansoura
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Language switching functionality
+    function switchLanguage(lang) {
+      const html = document.documentElement;
+      const enBtn = document.getElementById('en-btn');
+      const arBtn = document.getElementById('ar-btn');
+      
+      if (lang === 'ar') {
+        html.setAttribute('lang', 'ar');
+        html.setAttribute('dir', 'rtl');
+        enBtn.classList.remove('active');
+        enBtn.setAttribute('aria-pressed', 'false');
+        arBtn.classList.add('active');
+        arBtn.setAttribute('aria-pressed', 'true');
+        
+        // Update content for Arabic
+        document.querySelector('h1').textContent = 'سياسة الكوكيز';
+        document.querySelector('.last-updated').textContent = 'آخر تحديث: 2 سبتمبر 2025';
+        document.querySelectorAll('h2')[0].textContent = 'مقدمة';
+        document.querySelectorAll('h2')[1].textContent = '1. ما هي الكوكيز؟';
+        document.querySelectorAll('h2')[2].textContent = '2. أنواع الكوكيز التي نستخدمها';
+        document.querySelectorAll('h3')[0].textContent = 'أ. الكوكيز الأساسية';
+        document.querySelectorAll('h3')[1].textContent = 'ب. الكوكيز الوظيفية';
+        document.querySelectorAll('h3')[2].textContent = 'ج. كويكز التحليلات';
+        document.querySelectorAll('h3')[3].textContent = 'د. كويكز التسويق';
+        document.querySelectorAll('h2')[3].textContent = '3. كيف نستخدم الكوكيز';
+        document.querySelectorAll('h2')[4].textContent = '4. كويكز الطرف الثالث';
+        document.querySelectorAll('h2')[5].textContent = '5. إدارة الكوكيز';
+        document.querySelectorAll('h2')[6].textContent = '6. إشارات عدم التتبع';
+        document.querySelectorAll('h2')[7].textContent = '7. حماية البيانات والكوكيز';
+        document.querySelectorAll('h2')[8].textContent = '8. تحديثات سياسة الكوكيز هذه';
+        document.querySelectorAll('h2')[9].textContent = '9. اتصل بنا';
+        document.querySelector('.contact-info p').textContent = 'إذا كانت لديك أسئلة أو استفسارات حول سياسة الكوكيز هذه، يرجى التواصل معنا:';
+        document.querySelector('.footer-links a:nth-of-type(1)').textContent = 'سياسة الخصوصية';
+        document.querySelector('.footer-links a:nth-of-type(2)').textContent = 'الشروط والأحكام';
+        
+        // Update Arabic list items
+        document.querySelectorAll('ul li strong')[0].textContent = 'الغرض:';
+        document.querySelectorAll('ul li strong')[1].textContent = 'أمثلة:';
+        document.querySelectorAll('ul li strong')[2].textContent = 'المدة:';
+        // Repeat for all similar labels as needed
+        
+      } else {
+        html.setAttribute('lang', 'en');
+        html.setAttribute('dir', 'ltr');
+        arBtn.classList.remove('active');
+        arBtn.setAttribute('aria-pressed', 'false');
+        enBtn.classList.add('active');
+        enBtn.setAttribute('aria-pressed', 'true');
+        
+        // Reset to English
+        document.querySelector('h1').textContent = 'Cookie Policy';
+        document.querySelector('.last-updated').textContent = 'Last Updated: September 2, 2025';
+        document.querySelectorAll('h2')[0].textContent = 'Introduction';
+        document.querySelectorAll('h2')[1].textContent = '1. What Are Cookies?';
+        document.querySelectorAll('h2')[2].textContent = '2. Types of Cookies We Use';
+        document.querySelectorAll('h3')[0].textContent = 'a. Essential Cookies';
+        document.querySelectorAll('h3')[1].textContent = 'b. Functional Cookies';
+        document.querySelectorAll('h3')[2].textContent = 'c. Analytics Cookies';
+        document.querySelectorAll('h3')[3].textContent = 'd. Marketing Cookies';
+        document.querySelectorAll('h2')[3].textContent = '3. How We Use Cookies';
+        document.querySelectorAll('h2')[4].textContent = '4. Third-Party Cookies';
+        document.querySelectorAll('h2')[5].textContent = '5. Managing Cookies';
+        document.querySelectorAll('h2')[6].textContent = '6. Do Not Track Signals';
+        document.querySelectorAll('h2')[7].textContent = '7. Data Protection and Cookies';
+        document.querySelectorAll('h2')[8].textContent = '8. Updates to This Cookie Policy';
+        document.querySelectorAll('h2')[9].textContent = '9. Contact Us';
+        document.querySelector('.contact-info p').textContent = 'If you have questions or concerns about this Cookie Policy, please contact us:';
+        document.querySelector('.footer-links a:nth-of-type(1)').textContent = 'Privacy Policy';
+        document.querySelector('.footer-links a:nth-of-type(2)').textContent = 'Terms and Conditions';
+      }
+    }
+
+    // Accessibility: Focus management
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add keyboard navigation support
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+          document.body.classList.add('keyboard-user');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

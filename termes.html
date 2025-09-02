@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Terms and Conditions for ENG English Learning Platform - Learn about your rights and responsibilities when using our services."/>
+  <title>Terms and Conditions - ENG English Learning Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Serif+Arabic:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --light-bg: #f9f9f9;
+      --text-dark: #2c3e50;
+      --text-light: #7f8c8d;
+      --border-color: #ecf0f1;
+      --accent-hover: #2980b9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Serif', serif;
+      line-height: 1.8;
+      color: var(--text-dark);
+      background-color: var(--light-bg);
+      min-height: 100vh;
+      direction: ltr;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .logo span {
+      color: var(--secondary-color);
+    }
+
+    .language-toggle {
+      display: flex;
+      gap: 10px;
+    }
+
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--secondary-color);
+      color: var(--secondary-color);
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .lang-btn:hover, .lang-btn.active {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+
+    .last-updated {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    h1, h2, h3 {
+      margin: 30px 0 15px 0;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 8px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 25px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
+    ul {
+      margin: 16px 0;
+      padding-left: 20px;
+    }
+
+    ol {
+      margin: 16px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .contact-info {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 30px 0;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .email-link {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .email-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 30px 0;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--text-dark);
+      margin-right: 15px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+
+    .address {
+      font-style: italic;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .language-toggle {
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .lang-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+      }
+
+      .last-updated {
+        font-size: 13px;
+      }
+    }
+
+    /* Arabic Language Styles */
+    [lang="ar"] {
+      font-family: 'Noto Serif Arabic', serif;
+      text-align: right;
+    }
+
+    [lang="ar"] .logo {
+      text-align: right;
+    }
+
+    [lang="ar"] .language-toggle {
+      direction: rtl;
+    }
+
+    [lang="ar"] .footer-content {
+      text-align: right;
+    }
+
+    [lang="ar"] .footer-links a {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+
+    /* Accessibility Enhancements */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: var(--primary-color);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 1000;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 6px;
+    }
+
+    /* Focus indicators for keyboard navigation */
+    button:focus, a:focus {
+      outline: 3px solid var(--secondary-color);
+      outline-offset: 2px;
+    }
+
+    /* Ensure sufficient color contrast */
+    .high-contrast {
+      color: var(--primary-color);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="container">
+    <header role="banner">
+      <div class="logo">ENG<span>.edu</span></div>
+      <div class="language-toggle">
+        <button id="en-btn" class="lang-btn active" onclick="switchLanguage('en')" aria-pressed="true">English</button>
+        <button id="ar-btn" class="lang-btn" onclick="switchLanguage('ar')" aria-pressed="false">العربية</button>
+      </div>
+    </header>
+
+    <div id="main-content" tabindex="-1">
+      <p class="last-updated">Last Updated: September 2, 2025</p>
+      
+      <h1>Terms and Conditions</h1>
+      
+      <section>
+        <p>Welcome to ENG ("we," "us," or "our"), a platform dedicated to providing English language courses. These Terms and Conditions ("Terms") govern your access to and use of the ENG platform, including our website, mobile applications, and related services (collectively, the "Platform"). By accessing or using the Platform, you agree to comply with these Terms. If you do not agree, you must refrain from using the Platform.</p>
+      </section>
+
+      <section>
+        <h2>1. Eligibility</h2>
+        <ul>
+          <li>You must be at least 13 years of age to use the Platform. By using the Platform, you confirm that you meet this age requirement.</li>
+          <li>If you are using the Platform on behalf of an organization, you warrant that you have the authority to bind that organization to these Terms.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>2. Account Creation and Responsibilities</h2>
+        <ul>
+          <li>To access certain features, such as enrolling in courses or accessing premium content, you must register an account with accurate and complete information (e.g., name, email address).</li>
+          <li>You are responsible for safeguarding your account credentials and for all activities conducted under your account.</li>
+          <li>You must promptly notify us at <a href="mailto:support@engplatform.com" class="email-link">support@engplatform.com</a> if you suspect any unauthorized access to or use of your account.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Platform Usage</h2>
+        
+        <h3>3.1 Permitted Uses</h3>
+        <ul>
+          <li>You may use the Platform to enroll in English language courses, access educational materials, and participate in related activities such as quizzes, assignments, or discussion forums.</li>
+          <li>All use of the Platform must be lawful and in accordance with these Terms.</li>
+        </ul>
+        
+        <h3>3.2 Prohibited Uses</h3>
+        <p>You are prohibited from:</p>
+        <ul>
+          <li>Copying, reproducing, distributing, or modifying course materials without prior written permission from ENG.</li>
+          <li>Sharing your account credentials or allowing unauthorized individuals to access your account.</li>
+          <li>Engaging in illegal, fraudulent, or harmful activities, including posting offensive, defamatory, or inappropriate content.</li>
+          <li>Attempting to disrupt the Platform’s functionality, security, or performance, such as through hacking or introducing malicious code.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Course Enrollment and Payment Terms</h2>
+        
+        <h3>Enrollment</h3>
+        <p>Some courses or features may require payment or a subscription. Details regarding fees, access duration, and course availability will be provided at the time of enrollment.</p>
+        
+        <h3>Payments</h3>
+        <p>Payments are processed securely through third-party payment processors. You agree to provide accurate payment information and authorize charges for courses or subscriptions you purchase.</p>
+        
+        <h3>Refunds</h3>
+        <p>Refund eligibility depends on the specific course or subscription. Please review the refund policy provided during purchase. If no policy is specified, all sales are considered final.</p>
+        
+        <h3>Cancellations</h3>
+        <p>You may cancel subscriptions via your account settings. No refunds will be issued for partial billing periods unless otherwise stated.</p>
+      </section>
+
+      <section>
+        <h2>5. Intellectual Property Rights</h2>
+        <p>All content on the Platform, including but not limited to course materials, videos, text, graphics, and logos, is the property of ENG or its licensors and is protected by copyright, trademark, and other intellectual property laws.</p>
+        
+        <p>You are granted a limited, non-exclusive, non-transferable license to access and use course materials for personal, non-commercial purposes during your enrollment.</p>
+        
+        <p>Without explicit written consent from ENG, you may not reproduce, distribute, modify, or create derivative works from any Platform content.</p>
+      </section>
+
+      <section>
+        <h2>6. User-Generated Content</h2>
+        <p>You may submit content, such as forum posts, quiz answers, or feedback ("User Content"), to the Platform.</p>
+        
+        <p>By submitting User Content, you grant ENG a worldwide, non-exclusive, royalty-free license to use, reproduce, adapt, and display such content to operate and enhance the Platform.</p>
+        
+        <p>You confirm that your User Content does not violate third-party rights or applicable laws.</p>
+        
+        <p>ENG reserves the right to moderate or remove User Content that breaches these Terms or is deemed inappropriate.</p>
+      </section>
+
+      <section>
+        <h2>7. Privacy Policy</h2>
+        <p>Your use of the Platform is governed by our Privacy Policy, accessible at <a href="/privacy-policy" class="email-link">www.engplatform.com/privacy-policy</a>. Please review it to understand how we collect, use, and protect your personal information.</p>
+      </section>
+
+      <section>
+        <h2>8. Account Termination</h2>
+        <p>ENG may suspend or terminate your access to the Platform at our sole discretion if you violate these Terms or engage in activities that harm the Platform or its users.</p>
+        
+        <p>You may delete your account at any time through your account settings. Upon termination, access to paid courses may cease, and no refunds will be provided unless specified in the applicable refund policy.</p>
+      </section>
+
+      <section>
+        <h2>9. Disclaimers</h2>
+        <p>The Platform and its content are provided "as-is" and "as-available." ENG does not guarantee that the Platform will be uninterrupted, error-free, or secure from viruses or other harmful components.</p>
+        
+        <p>ENG does not guarantee the accuracy, completeness, or effectiveness of course content for achieving specific educational outcomes.</p>
+        
+        <p>You use the Platform at your own risk and are responsible for determining its suitability for your needs.</p>
+      </section>
+
+      <section>
+        <h2>10. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, ENG, its affiliates, officers, employees, or agents will not be liable for any indirect, incidental, consequential, or punitive damages arising from your use of the Platform.</p>
+        
+        <p>ENG’s total liability for any claim related to the Platform will not exceed the amount you paid for the specific service or course giving rise to the claim.</p>
+      </section>
+
+      <section>
+        <h2>11. Indemnification</h2>
+        <p>You agree to indemnify and hold harmless ENG and its affiliates from any claims, losses, damages, or expenses (including legal fees) resulting from your breach of these Terms, misuse of the Platform, or violation of third-party rights.</p>
+      </section>
+
+      <section>
+        <h2>12. Governing Law and Dispute Resolution</h2>
+        <p>These Terms are governed by the laws of Egypt, excluding its conflict of law provisions.</p>
+        
+        <p>Any disputes arising from these Terms or your use of the Platform will be resolved through binding arbitration in Mansoura, Egypt, following the rules of the Egyptian Arbitration Center. You waive the right to participate in class action lawsuits.</p>
+      </section>
+
+      <section>
+        <h2>13. Modifications to Terms</h2>
+        <p>We may revise these Terms periodically. Significant changes will be communicated by posting the updated Terms on the Platform or via email notification.</p>
+        
+        <p>Your continued use of the Platform after changes indicates your acceptance of the revised Terms.</p>
+      </section>
+
+      <section>
+        <h2>14. Third-Party Services</h2>
+        <p>The Platform may include links to third-party websites or services (e.g., payment processors). ENG is not responsible for the content, availability, or practices of these third parties.</p>
+      </section>
+
+      <section>
+        <h2>15. Force Majeure</h2>
+        <p>ENG will not be liable for any failure to perform its obligations due to unforeseen events beyond our reasonable control, including natural disasters, wars, or technical failures.</p>
+      </section>
+
+      <div class="contact-info" role="contentinfo">
+        <h2>16. Contact Information</h2>
+        <p>For questions or concerns regarding these Terms, please contact us:</p>
+        <p>ENG Support Team</p>
+        <p>Email: <a href="mailto:support@engplatform2025n@gmail.com" class="email-link">support@engplatform2025n@gmail.com</a></p>
+        <p>Address: Egypt, Dakahliya, Mansoura</p>
+      </div>
+    </div>
+
+    <footer role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+          <a href="#" aria-label="Cookie Policy">Cookie Policy</a>
+          <a href="#" aria-label="Accessibility Statement">Accessibility</a>
+        </div>
+        <div class="address">
+          &copy; 2025 ENG English Learning Platform. All rights reserved.<br>
+          Egypt, Dakahliya, Mansoura
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Language switching functionality
+    function switchLanguage(lang) {
+      const html = document.documentElement;
+      const enBtn = document.getElementById('en-btn');
+      const arBtn = document.getElementById('ar-btn');
+      
+      if (lang === 'ar') {
+        html.setAttribute('lang', 'ar');
+        html.setAttribute('dir', 'rtl');
+        enBtn.classList.remove('active');
+        enBtn.setAttribute('aria-pressed', 'false');
+        arBtn.classList.add('active');
+        arBtn.setAttribute('aria-pressed', 'true');
+        
+        // Update content for Arabic
+        document.querySelector('h1').textContent = 'الشروط والأحكام';
+        document.querySelector('.last-updated').textContent = 'آخر تحديث: 2 سبتمبر 2025';
+        document.querySelectorAll('h2')[0].textContent = 'مقدمة';
+        document.querySelectorAll('h2')[1].textContent = '1. الأهلية';
+        document.querySelectorAll('h2')[2].textContent = '2. إنشاء الحساب والمسؤوليات';
+        document.querySelectorAll('h2')[3].textContent = '3. استخدام المنصة';
+        document.querySelectorAll('h3')[0].textContent = '3.1 الاستخدامات المسموح بها';
+        document.querySelectorAll('h3')[1].textContent = '3.2 الاستخدامات المحظورة';
+        document.querySelectorAll('h2')[4].textContent = '4. تسجيل الدورة والمصطلحات المالية';
+        document.querySelector('h3:nth-of-type(3)').textContent = 'التسجيل';
+        document.querySelector('h3:nth-of-type(4)').textContent = 'المدفوعات';
+        document.querySelector('h3:nth-of-type(5)').textContent = 'الاسترداد';
+        document.querySelector('h3:nth-of-type(6)').textContent = 'الإلغاء';
+        document.querySelectorAll('h2')[5].textContent = '5. حقوق الملكية الفكرية';
+        document.querySelectorAll('h2')[6].textContent = '6. المحتوى الذي ينشئه المستخدم';
+        document.querySelectorAll('h2')[7].textContent = '7. سياسة الخصوصية';
+        document.querySelectorAll('h2')[8].textContent = '8. إنهاء الحساب';
+        document.querySelectorAll('h2')[9].textContent = '9. إخلاء المسؤولية';
+        document.querySelectorAll('h2')[10].textContent = '10. حدود المسؤولية';
+        document.querySelectorAll('h2')[11].textContent = '11. التعويض';
+        document.querySelectorAll('h2')[12].textContent = '12. القانون الحاكم وحل النزاعات';
+        document.querySelectorAll('h2')[13].textContent = '13. تعديلات على الشروط';
+        document.querySelectorAll('h2')[14].textContent = '14. خدمات الطرف الثالث';
+        document.querySelectorAll('h2')[15].textContent = '15. القوة القاهرة';
+        document.querySelectorAll('h2')[16].textContent = '16. معلومات الاتصال';
+        document.querySelector('.contact-info p').textContent = 'لأية أسئلة أو استفسارات بخصوص هذه الشروط، يرجى التواصل معنا:';
+        document.querySelector('.footer-links a:nth-of-type(1)').textContent = 'سياسة الخصوصية';
+      } else {
+        html.setAttribute('lang', 'en');
+        html.setAttribute('dir', 'ltr');
+        arBtn.classList.remove('active');
+        arBtn.setAttribute('aria-pressed', 'false');
+        enBtn.classList.add('active');
+        enBtn.setAttribute('aria-pressed', 'true');
+        
+        // Reset to English
+        document.querySelector('h1').textContent = 'Terms and Conditions';
+        document.querySelector('.last-updated').textContent = 'Last Updated: September 2, 2025';
+        document.querySelectorAll('h2')[0].textContent = 'Introduction';
+        document.querySelectorAll('h2')[1].textContent = '1. Eligibility';
+        document.querySelectorAll('h2')[2].textContent = '2. Account Creation and Responsibilities';
+        document.querySelectorAll('h2')[3].textContent = '3. Platform Usage';
+        document.querySelectorAll('h3')[0].textContent = '3.1 Permitted Uses';
+        document.querySelectorAll('h3')[1].textContent = '3.2 Prohibited Uses';
+        document.querySelectorAll('h2')[4].textContent = '4. Course Enrollment and Payment Terms';
+        document.querySelector('h3:nth-of-type(3)').textContent = 'Enrollment';
+        document.querySelector('h3:nth-of-type(4)').textContent = 'Payments';
+        document.querySelector('h3:nth-of-type(5)').textContent = 'Refunds';
+        document.querySelector('h3:nth-of-type(6)').textContent = 'Cancellations';
+        document.querySelectorAll('h2')[5].textContent = '5. Intellectual Property Rights';
+        document.querySelectorAll('h2')[6].textContent = '6. User-Generated Content';
+        document.querySelectorAll('h2')[7].textContent = '7. Privacy Policy';
+        document.querySelectorAll('h2')[8].textContent = '8. Account Termination';
+        document.querySelectorAll('h2')[9].textContent = '9. Disclaimers';
+        document.querySelectorAll('h2')[10].textContent = '10. Limitation of Liability';
+        document.querySelectorAll('h2')[11].textContent = '11. Indemnification';
+        document.querySelectorAll('h2')[12].textContent = '12. Governing Law and Dispute Resolution';
+        document.querySelectorAll('h2')[13].textContent = '13. Modifications to Terms';
+        document.querySelectorAll('h2')[14].textContent = '14. Third-Party Services';
+        document.querySelectorAll('h2')[15].textContent = '15. Force Majeure';
+        document.querySelectorAll('h2')[16].textContent = '16. Contact Information';
+        document.querySelector('.contact-info p').textContent = 'For questions or concerns regarding these Terms, please contact us:';
+        document.querySelector('.footer-links a:nth-of-type(1)').textContent = 'Privacy Policy';
+      }
+    }
+
+    // Accessibility: Focus management
+    document.addEventListener('DOMContentLoaded', function() {
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      
+      // Add keyboard navigation support
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+          document.body.classList.add('keyboard-user');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

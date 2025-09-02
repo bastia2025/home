@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Refund Policy for ENG English Learning Platform - Learn about our refund eligibility, timelines, and process for course purchases and subscriptions."/>
+  <title>Refund Policy - ENG English Learning Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Serif+Arabic:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #27ae60;
+      --light-bg: #f9f9f9;
+      --text-dark: #2c3e50;
+      --text-light: #7f8c8d;
+      --border-color: #ecf0f1;
+      --accent-hover: #2ecc71;
+      --warning-color: #e74c3c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Serif', serif;
+      line-height: 1.8;
+      color: var(--text-dark);
+      background-color: var(--light-bg);
+      min-height: 100vh;
+      direction: ltr;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .logo span {
+      color: var(--secondary-color);
+    }
+
+    .language-toggle {
+      display: flex;
+      gap: 10px;
+    }
+
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--secondary-color);
+      color: var(--secondary-color);
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .lang-btn:hover, .lang-btn.active {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+
+    .last-updated {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    h1, h2, h3 {
+      margin: 30px 0 15px 0;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 8px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 25px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
+    ul {
+      margin: 16px 0;
+      padding-left: 20px;
+    }
+
+    ol {
+      margin: 16px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .refund-eligible {
+      background-color: #e8f5e9;
+      border-left: 4px solid var(--secondary-color);
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+
+    .refund-not-eligible {
+      background-color: #ffebee;
+      border-left: 4px solid var(--warning-color);
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+
+    .contact-info {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin: 30px 0;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .email-link {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .email-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 30px 0;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-light);
+      font-size: 14px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--text-dark);
+      margin-right: 15px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+
+    .address {
+      font-style: italic;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .language-toggle {
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      .lang-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+      }
+
+      .last-updated {
+        font-size: 13px;
+      }
+    }
+
+    /* Arabic Language Styles */
+    [lang="ar"] {
+      font-family: 'Noto Serif Arabic', serif;
+      text-align: right;
+    }
+
+    [lang="ar"] .logo {
+      text-align: right;
+    }
+
+    [lang="ar"] .language-toggle {
+      direction: rtl;
+    }
+
+    [lang="ar"] .footer-content {
+      text-align: right;
+    }
+
+    [lang="ar"] .footer-links a {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+
+    /* Accessibility Enhancements */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: var(--primary-color);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 1000;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 6px;
+    }
+
+    /* Focus indicators for keyboard navigation */
+    button:focus, a:focus {
+      outline: 3px solid var(--secondary-color);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="container">
+    <header role="banner">
+      <div class="logo">ENG<span>.edu</span></div>
+      <div class="language-toggle">
+        <button id="en-btn" class="lang-btn active" onclick="switchLanguage('en')" aria-pressed="true">English</button>
+        <button id="ar-btn" class="lang-btn" onclick="switchLanguage('ar')" aria-pressed="false">العربية</button>
+      </div>
+    </header>
+
+    <div id="main-content" tabindex="-1">
+      <p class="last-updated">Last Updated: September 2, 2025</p>
+      
+      <h1>Refund Policy</h1>
+      
+      <section>
+        <p>ENG ("we," "us," or "our") is committed to providing high-quality English language courses through our platform (the "Platform"). This Refund Policy outlines the conditions under which you may request a refund for course purchases or subscriptions. By enrolling in a course or subscribing to our services, you agree to the terms of this Refund Policy.</p>
+      </section>
+
+      <section>
+        <h2>1. Eligibility for Refunds</h2>
+        
+        <h3>1.1 Course Purchases</h3>
+        
+        <div class="refund-eligible">
+          <strong>Refund Window:</strong> You may request a refund for a paid course within 14 days of purchase, provided you have not completed more than 20% of the course content (e.g., lessons, quizzes, or assignments).
+        </div>
+        
+        <p><strong>Non-Refundable Courses:</strong> Certain courses may be marked as non-refundable at the time of purchase. This will be clearly indicated during the checkout process.</p>
+        
+        <p><strong>Free Trials:</strong> If a course offers a free trial, no payment is charged until the trial period ends. You may cancel during the trial without incurring charges.</p>
+        
+        <h3>1.2 Subscriptions</h3>
+        
+        <div class="refund-eligible">
+          <strong>Refund Window:</strong> For subscription-based access to the Platform (e.g., monthly or annual plans), you may request a refund within 14 days of your initial subscription payment, provided you have not accessed more than 20% of any subscribed course content.
+        </div>
+        
+        <div class="refund-not-eligible">
+          <strong>Recurring Payments:</strong> No refunds will be provided for subscription payments after the initial 14-day period or for partial billing periods (e.g., mid-month or mid-year cancellations).
+        </div>
+        
+        <p><strong>Cancellation:</strong> You may cancel your subscription at any time through your account settings. Cancellation will take effect at the end of the current billing period, and no further charges will be applied.</p>
+      </section>
+
+      <section>
+        <h2>2. Non-Refundable Items</h2>
+        <p>The following are not eligible for refunds:</p>
+        <ul>
+          <li>Courses or subscriptions marked as non-refundable at the time of purchase.</li>
+          <li>Courses where more than 20% of the content has been accessed or completed.</li>
+          <li>Gift cards, promotional credits, or discounted purchases, unless otherwise specified.</li>
+          <li>Fees associated with third-party services (e.g., payment processing fees).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. How to Request a Refund</h2>
+        <p>To request a refund:</p>
+        <ol>
+          <li>Contact our support team at <a href="mailto:support@engplatform.com" class="email-link">support@engplatform.com</a> within the eligible refund period.</li>
+          <li>Provide your account details, purchase information (e.g., order number), and the reason for your refund request.</li>
+          <li>Our team will review your request and confirm eligibility based on this Refund Policy.</li>
+          <li>Approved refunds will be processed within 7-10 business days to the original payment method.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>4. Exceptions</h2>
+        
+        <h3>Technical Issues</h3>
+        <p>If you experience technical issues that prevent access to a course or the Platform, please contact <a href="mailto:support@engplatform.com" class="email-link">support@engplatform.com</a>. We will attempt to resolve the issue. If the issue cannot be resolved, we may offer a refund or account credit at our discretion.</p>
+        
+        <h3>Special Circumstances</h3>
+        <p>In exceptional cases (e.g., documented medical emergencies), we may consider refund requests outside the standard eligibility criteria. Such requests will be reviewed on a case-by-case basis.</p>
+      </section>
+
+      <section>
+        <h2>5. Refunds for Canceled or Modified Courses</h2>
+        <ul>
+          <li>If ENG cancels a course before it begins, you will receive a full refund or an option to transfer to a comparable course.</li>
+          <li>If significant changes are made to a course (e.g., content or access restrictions) after your enrollment, and these changes materially affect your experience, you may request a refund within 14 days of the change.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Payment Disputes</h2>
+        <p>If you believe a charge was made in error, contact us at <a href="mailto:support@engplatform.com" class="email-link">support@engplatform.com</a> before initiating a chargeback with your payment provider. Chargebacks without prior communication may result in account suspension.</p>
+      </section>
+
+      <section>
+        <h2>7. Updates to This Refund Policy</h2>
+        <p>We may update this Refund Policy from time to time. Significant changes will be communicated by posting the updated policy on the Platform or via email. Your continued use of the Platform after changes indicates your acceptance of the updated policy.</p>
+      </section>
+
+      <div class="contact-info" role="contentinfo">
+        <h2>8. Contact Us</h2>
+        <p>For questions or refund requests, please contact:</p>
+        <p>ENG Support Team</p>
+        <p>Email: <a href="mailto:support@engplatform2025n@gmail.com" class="email-link">support@engplatform2025n@gmail.com</a></p>
+        <p>Address: Egypt, Dakahliya, Mansoura</p>
+      </div>
+    </div>
+
+    <footer role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+          <a href="/terms-conditions" aria-label="Terms and Conditions">Terms and Conditions</a>
+          <a href="/cookie-policy" aria-label="Cookie Policy">Cookie Policy</a>
+        </div>
+        <div class="address">
+          &copy; 2025 ENG English Learning Platform. All rights reserved.<br>
+          Egypt, Dakahliya, Mansoura
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Language switching functionality
+    function switchLanguage(lang) {
+      const html = document.documentElement;
+      const enBtn = document.getElementById('en-btn');
+      const arBtn = document.getElementById('ar-btn');
+      
+      if (lang === 'ar') {
+        html.setAttribute('lang', 'ar');
+        html.setAttribute('dir', 'rtl');
+        enBtn.classList.remove('active');
+        enBtn.setAttribute('aria-pressed', 'false');
+        arBtn.classList.add('active');
+        arBtn.setAttribute('aria-pressed', 'true');
+        
+        // Update content for Arabic
+        document.querySelector('h1').textContent = 'سياسة الاسترداد';
+        document.querySelector('.last-updated').textContent = 'آخر تحديث: 2 سبتمبر 2025';
+        document.querySelectorAll('h2')[0].textContent = 'مقدمة';
+        document.querySelectorAll('h2')[1].textContent = '1. الأهلية للاسترداد';
+        document.querySelectorAll('h3')[0].textContent = '1.1 مشتريات الدورات';
+        document.querySelectorAll('h3')[1].textContent = '1.2 الاشتراكات';
+        document.querySelectorAll('h2')[2].textContent = '2. العناصر غير المؤهلة للاسترداد';
+        document.querySelectorAll('h2')[3].textContent = '3. كيفية طلب استرداد';
+        document.querySelectorAll('h2')[4].textContent = '4. الاستثناءات';
+        document.querySelectorAll('h3')[2].textContent = 'المشاكل التقنية';
+        document.querySelectorAll('h3')[3].textContent = 'ظروف خاصة';
+        document.querySelectorAll('h2')[5].textContent = '5. استرداد الدورات الملغاة أو المعدلة';
+        document.querySelectorAll('h2')[6].textContent = '6. نزاعات الدفع';
+        document.querySelectorAll('h2')[7].textContent = '7. تحديثات سياسة الاسترداد هذه';
+        document.querySelectorAll('h2')[8].textContent = '8. اتصل بنا';
+        document.querySelector('.contact-info p').textContent = 'للاستفسارات أو طلبات الاسترداد، يرجى التواصل معنا:';
+        document.querySelector('.footer-links a:nth-of-type(1)').textContent = 'سياسة الخصوصية';
+        document.querySelector('.footer-links a:nth-of-type(2)').textContent = 'الشروط والأحكام';
+        document.querySelector('.footer-links a:nth-of-type(3)').textContent = 'سياسة الكوكيز';
+        
+        // Update Arabic labels
+        document.querySelectorAll('.refund-eligible strong')[0].textContent = 'نافذة الاسترداد:';
+        document.querySelectorAll('.refund-not-eligible strong')[0].textContent = 'المدفوعات المتكررة:';
+        
+      } else {
+        html.setAttribute('lang', 'en');
+        html.setAttribute('dir', 'ltr');
+        arBtn.classList.remove('active');
+        arBtn.setAttribute('aria-pressed', 'false');
+        enBtn.classList.add('active');
+        enBtn.setAttribute('aria-pressed', 'true');
+        
+        // Reset to English
+        document.querySelector('h1').textContent = 'Refund Policy';
+        document.querySelector('.last-updated').textContent = 'Last Updated: September 2, 2025';
+        document.querySelectorAll('h2')[0].textContent = 'Introduction';
+        document.querySelectorAll('h2')[1].textContent = '1. Eligibility for Refunds';
+        document.querySelectorAll('h3')[0].textContent = '1.1 Course Purchases';
+        document.querySelectorAll('h3')[1].textContent = '1.2 Subscriptions';
+        document.querySelectorAll('h2')[2].textContent = '2. Non-Refundable Items';
+        document.querySelectorAll('h2')[3].textContent = '3. How to Request a Refund';
+        document.querySelectorAll('h2')[4].textContent = '4. Exceptions';
+        document.querySelectorAll('h3')[2].textContent = 'Technical Issues';
+        document.querySelectorAll('h3')[3].textContent = 'Special Circumstances';
+        document.querySelectorAll('h2')[5].textContent = '5. Refunds for Canceled or Modified Courses';
+        document.querySelectorAll('h2')[6].textContent = '6. Payment Disputes';
+        document.querySelectorAll('h2')[7].textContent = '7. Updates to This Refund Policy';
+        document.querySelectorAll('h2')[8].textContent = '8. Contact Us';
+        document.querySelector('.contact-info p').textContent = 'For questions or refund requests, please contact:';
+        document.querySelector('.footer-links a:nth-of-type(1)').textContent = 'Privacy Policy';
+        document.querySelector('.footer-links a:nth-of-type(2)').textContent = 'Terms and Conditions';
+        document.querySelector('.footer-links a:nth-of-type(3)').textContent = 'Cookie Policy';
+      }
+    }
+
+    // Accessibility: Focus management
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add keyboard navigation support
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+          document.body.classList.add('keyboard-user');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
